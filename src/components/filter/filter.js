@@ -1,4 +1,5 @@
 import React from 'react';
+import './filter.css';
 
 class Filter extends React.Component{
     constructor(props) {
@@ -14,12 +15,23 @@ class Filter extends React.Component{
 
     render() {
         return(
-            <div className="form-check">
-                <input className="form-check-input" type="checkbox" value="true" id="full_time=" onChange={this.holdChange}/>
-                    <label className="form-check-label" htmlFor="full_time=">
-                        Full time
-                    </label>
+            <div className='filter'>
+                <div className="form-check">
+                    <input className="form-check-input" type="checkbox" value="true" id="full_time=" onChange={this.holdChange}/>
+                        <label className="form-check-label" htmlFor="full_time=">
+                            Full time
+                        </label>
+                </div>
+                <div className="form-group">
+                    <label htmlFor="location=">Location</label>
+                    <input className="form-control" id="location=" onChange={this.holdChange}/>
+                </div>
+                <div className="form-group">
+                    <label htmlFor="description=">Description</label>
+                    <input className="form-control" id="description=" onChange={this.holdChange}/>
+                </div>
             </div>
+
         );
     }
 }
