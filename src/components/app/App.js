@@ -20,12 +20,12 @@ class App extends React.Component{
     }
 
     changeVacancyList(newList) {
-        this.setState({vacancies: newList});
+        this.setState({vacancies: newList,});
     }
 
     render() {
         return(
-            <ResponseComponent vacancies ={this.state.vacancies} onChange={this.changeVacancyList} />
+                <ResponseComponent vacancies ={this.state.vacancies} onChange={this.changeVacancyList} />
         );
       }
 };

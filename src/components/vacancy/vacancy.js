@@ -10,7 +10,7 @@ class Vacancy extends React.Component {
                     <p className='date'>{this.props.vacancy.created_at}</p>
                 </div>
                 <h5>{this.props.vacancy.company}</h5>
-                <div className='location'><img src='./121923-200.png' /><p>{this.props.vacancy.location}</p></div>
+                <div className='location'><img src='./121923-200.png' alt='' /><p>{this.props.vacancy.location}</p></div>
                 <p>{this.props.vacancy.type}</p>
                 <hr/>
             </div>
