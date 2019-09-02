@@ -9,7 +9,7 @@ class VacancyList extends React.Component{
                 <h1>Найдено {this.props.vacancies.length} вакансий</h1>
                 <div>
                     {this.props.vacancies.map(vacancy => {
-                        return <Vacancy vacancy={vacancy}/>
+                        return <Vacancy vacancy={vacancy} key={vacancy.title}/>
                     })
                     }
                 </div>
