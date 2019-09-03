@@ -1,6 +1,7 @@
 import React from "react";
 import Vacancy from "../vacancy/vacancy.js";
 import './vacancyList.css';
+import VacancyPage from "../vacancyPage/vacancyPage";
 
 class VacancyList extends React.Component{
     render() {
@@ -9,7 +10,7 @@ class VacancyList extends React.Component{
                 <h1>Найдено {this.props.vacancies.length} вакансий</h1>
                 <div>
                     {this.props.vacancies.map(vacancy => {
-                        return <Vacancy vacancy={vacancy} key={vacancy.title}/>
+                        return <Vacancy vacancy={vacancy} key={vacancy} />
                     })
                     }
                 </div>

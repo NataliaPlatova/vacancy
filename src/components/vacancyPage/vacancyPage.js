@@ -8,7 +8,7 @@ const vacancy = {
     type:"Full Time"
 };
 
-class vacancyPage extends React.Component {
+class VacancyPage extends React.Component {
     render(){
         return(
         <div>
@@ -22,4 +22,4 @@ class vacancyPage extends React.Component {
     }
 }
 
-export default vacancyPage;
+export default VacancyPage;

@@ -2,7 +2,7 @@ import React from 'react';
 import './App.css';
 import List from "../list/list.js";
 import { BrowserRouter as Router, Route, Link } from 'react-router-dom';
-import vacancyPage from "../vacancyPage/vacancyPage";
+import VacancyPage from "../vacancyPage/vacancyPage.js";
 
 
 class App extends React.Component{
@@ -12,7 +12,7 @@ class App extends React.Component{
                 <Router>
                     <div>
                         <Route exact path="/" component={List} />
-                        <Route exact path="/page" component={vacancyPage} />
+                        <Route exact path="/vacancy" component={VacancyPage} />
                     </div>
                 </Router>
             </div>
