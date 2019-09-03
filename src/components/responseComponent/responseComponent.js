@@ -27,7 +27,7 @@ class ResponseComponent extends React.Component{
     render() {
         const xhr = new XMLHttpRequest();
         const url = 'https://cors-anywhere.herokuapp.com/https://jobs.github.com/positions.json?';
-        let endpoint =url+this.state.queryParams+this.state.wordQuery;
+        let endpoint =`${url}${this.state.queryParams}${this.state.wordQuery}`;
 
         xhr.responseType = 'json';
         xhr.onreadystatechange = () => {
