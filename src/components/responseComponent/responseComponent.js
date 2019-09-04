@@ -5,29 +5,24 @@ import Filter from "../filter/filter";
 class ResponseComponent extends React.Component{
     constructor(props){
         super(props);
-        this.state = {
-            queryParams: '',
-            wordQuery: ''
-        }
-        this.changeParams = this.changeParams.bind(this);
+        // this.state = {
+        //     queryParams: '',
+        //     wordQuery: ''
+        // }
+        this.makeRequest = this.makeRequest.bind(this);
         this.handleChange = this.handleChange.bind(this);
+        this.makeRequest('','');
     }
 
     handleChange(list) {
         this.props.onChange(list);
     }
 
-    changeParams(newQueryParams, newWordQuery) {
-        this.setState({
-            queryParams: newQueryParams,
-            wordQuery: newWordQuery
-        });
-    }
-
-    render() {
+    makeRequest(newQueryParams, newWordQuery) {
         const xhr = new XMLHttpRequest();
         const url = 'https://cors-anywhere.herokuapp.com/https://jobs.github.com/positions.json?';
-        let endpoint =`${url}${this.state.queryParams}${this.state.wordQuery}`;
+        // let endpoint =`${url}${this.state.queryParams}${this.state.wordQuery}`;
+        let endpoint =`${url}${newQueryParams}${newWordQuery}`;
 
         xhr.responseType = 'json';
         xhr.onreadystatechange = () => {
@@ -39,9 +34,16 @@ class ResponseComponent extends React.Component{
         xhr.open('GET', endpoint, true);
         xhr.send();
 
+        // this.setState({
+        //     queryParams: newQueryParams,
+        //     wordQuery: newWordQuery
+        // });
+    }
+
+    render() {
         return (
             <div>
-                <Filter queryParams={this.state.queryParams} wordQuery={this.state.wordQuery} onChangeParams={this.changeParams}/>
+                <Filter onChangeParams={this.makeRequest}/>
                 <VacancyList vacancies={this.props.vacancies} />
             </div>
         );

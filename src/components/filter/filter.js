@@ -24,11 +24,11 @@ class Filter extends React.Component{
                 </div>
                 <div className="form-group">
                     <label htmlFor="location=">Location</label>
-                    <input className="form-control" id="location=" onChange={this.holdChange}/>
+                    <input className="form-control" id="location=" onMouseLeave={this.holdChange}/>
                 </div>
                 <div className="form-group">
                     <label htmlFor="description=">Description</label>
-                    <input className="form-control" id="description=" onChange={this.holdChange}/>
+                    <input className="form-control" id="description=" onMouseLeave={this.holdChange}/>
                 </div>
             </div>
 
