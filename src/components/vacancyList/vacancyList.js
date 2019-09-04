@@ -1,7 +1,6 @@
 import React from "react";
 import Vacancy from "../vacancy/vacancy.js";
 import './vacancyList.css';
-import VacancyPage from "../vacancyPage/vacancyPage";
 
 class VacancyList extends React.Component{
     render() {

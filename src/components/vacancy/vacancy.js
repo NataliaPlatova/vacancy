@@ -6,7 +6,7 @@ class Vacancy extends React.Component {
         return (
             <div className='vacancyListItem'>
                 <div className='vacancyListHead'>
-                    <h3><a href="http://localhost:3000/vacancy">{this.props.vacancy.title}</a></h3>
+                    <h3><a href='http://localhost:3000/vacancy'>{this.props.vacancy.title}</a></h3>
                     <p className='date'>{this.props.vacancy.created_at}</p>
                 </div>
                 <h5>{this.props.vacancy.company}</h5>
@@ -17,4 +17,5 @@ class Vacancy extends React.Component {
         );
     }
 }
+
 export default Vacancy;

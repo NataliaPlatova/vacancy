@@ -33,7 +33,6 @@ class ResponseComponent extends React.Component{
         xhr.onreadystatechange = () => {
             if(xhr.readyState===XMLHttpRequest.DONE) {
                 this.handleChange(xhr.response);
-                console.log(this.state)
             }
         };
 
