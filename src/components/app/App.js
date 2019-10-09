@@ -13,7 +13,7 @@ class App extends React.Component{
                 <Router>
                     <div>
                         <Route exact path="/vacancy" component={List} />
-                        <Route path={`${match.path}/page`} component={VacancyPage}/>
+                        <Route path='/vacancy/page' component={VacancyPage}/>
                     </div>
                 </Router>
             </div>

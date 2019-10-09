@@ -8,7 +8,7 @@ class Vacancy extends React.Component {
         return (
             <div className='vacancyListItem'>
                 <div className='vacancyListHead'>
-                    <h3><Link to={`${match.url}/page`}>{this.props.vacancy.title}</Link></h3>
+                    <h3><Link to='/vacancy/page'>{this.props.vacancy.title}</Link></h3>
                     <p className='date'>{this.props.vacancy.created_at}</p>
                 </div>
                 <h5>{this.props.vacancy.company}</h5>
