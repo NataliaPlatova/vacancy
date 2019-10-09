@@ -3,6 +3,7 @@ import './App.css';
 import List from "../list/list.js";
 import { BrowserRouter as Router, Route, Link } from 'react-router-dom';
 import VacancyPage from "../vacancyPage/vacancyPage.js";
+import {Binding as match} from "@babel/traverse";
 
 
 class App extends React.Component{
@@ -11,8 +12,8 @@ class App extends React.Component{
             <div>
                 <Router>
                     <div>
-                        <Route exact path="/" component={List} />
-                        <Route exact path="/vacancy" component={VacancyPage}/>
+                        <Route exact path="/vacancy" component={List} />
+                        <Route path={`${match.path}/page`} component={VacancyPage}/>
                     </div>
                 </Router>
             </div>

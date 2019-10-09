@@ -1,12 +1,14 @@
 import React from "react";
 import './vacancy.css';
+import {Link} from "react-router-dom";
+import {Request as match} from "whatwg-fetch";
 
 class Vacancy extends React.Component {
     render() {
         return (
             <div className='vacancyListItem'>
                 <div className='vacancyListHead'>
-                    <h3><a href='http://localhost:3000/vacancy'>{this.props.vacancy.title}</a></h3>
+                    <h3><Link to={`${match.url}/page`}>{this.props.vacancy.title}</Link></h3>
                     <p className='date'>{this.props.vacancy.created_at}</p>
                 </div>
                 <h5>{this.props.vacancy.company}</h5>
